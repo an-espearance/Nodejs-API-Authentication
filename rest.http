@@ -1,0 +1,32 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODk3NjEyNDksImV4cCI6MTY4OTc2MTI3OSwiYXVkIjoiNjRiNzhiNDQzMjE5MWY0MzZiMmE5NjM0IiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.C0TMRhoS9v7iVPinc89QXV4zTunifVchM0KpJ0FEq1k
+###Login Route
+POST  http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"johny@gmail.com",
+    "password":"12345678"
+}
+
+
+###Register Route
+POST  http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"newuser@gmail.com",
+    "password":"12345678"
+}
+
+### Refresh token route
+POST  http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODk3NjEyNDksImV4cCI6MTcyMTMxODg0OSwiYXVkIjoiNjRiNzhiNDQzMjE5MWY0MzZiMmE5NjM0IiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.D8MsH1k3wqmda_a_SNc5MssKIOs0RyHFsZTplhJMyk8"
+}
+
+
+### Logout Route
+POST   http://localhost:3000/auth/logout HTTP/1.1 
